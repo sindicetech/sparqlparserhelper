@@ -1,0 +1,27 @@
+{
+  "name": "sparqlparserhelper",
+  "main": "sparqlparserhelper.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/sindicetech/sparqlparserhelper",
+  "authors": [
+    "Szymon Danielczyk <danielczyk.szymon@gmail.com>"
+  ],
+  "description": "Small utility lib",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "json",
+    "utils"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

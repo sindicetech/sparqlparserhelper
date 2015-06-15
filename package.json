@@ -1,0 +1,32 @@
+{
+  "name": "sparqlparserhelper",
+  "version": "1.0.0",
+  "description": "Small utility lib",
+  "main": "sparqlparser.js",
+  "scripts": {
+    "test": "mocha tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sindicetech/sparqlparserhelper.git"
+  },
+  "keywords": [
+    "json",
+    "utils"
+  ],
+  "author": "Szymon Danielczyk <danielczyk.szymon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sindicetech/sparqlparserhelper/issues"
+  },
+  "homepage": "https://github.com/sindicetech/sparqlparserhelper",
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": "^2.2.5",
+    "nodeunit": "^0.9.1"
+  },
+  "dependencies": {
+    "antlr4": "^4.5.2",
+    "lodash": "^3.9.3"
+  }
+}
