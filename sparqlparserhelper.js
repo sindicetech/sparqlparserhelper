@@ -1,12 +1,10 @@
 (function() {
 
-  var _ = require('lodash');
+  var _ = require('underscore');
   var antlr4 = require('antlr4');
   var SparqlLexer = require('./lib/SparqlLexer.js');
   var SparqlParser = require('./lib/SparqlParser.js');
   var SparqlParserListener = require('./lib/SparqlParserListener');
-
-  'use strict';
 
   function SparqlParserHelper () {}
 
@@ -15,7 +13,7 @@
     //
     // PRIVATE methods
     //
-    VariableNamePrinter = function(query) {
+    var VariableNamePrinter = function(query) {
       SparqlParserListener.SparqlParserListener.call(this); // inherit default listener
       this.selectRegister = [];
       this.whereRegister = [];
@@ -65,27 +63,16 @@
         var printer = new VariableNamePrinter(query);
         antlr4.tree.ParseTreeWalker.DEFAULT.walk(printer, tree);
 
-        var varFromSelect = _.unique(printer.selectRegister);
+        var varFromSelect = _.uniq(printer.selectRegister);
         if (varFromSelect.length > 0) {
           return varFromSelect;
         }
-        return _.unique(printer.whereRegister)
+        return _.uniq(printer.whereRegister)
       }
     }
 
   })();
 
-  // Make it to work in node and browser and AMD style
-  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = new SparqlParserHelper();
-  } else {
-    if (typeof define === 'function' && define.amd) {
-      define([], function () {
-        return new SparqlParserHelper();
-      });
-    } else {
-      window.sparqlParserHelper = new SparqlParserHelper();
-    }
-  }
+  module.exports = SparqlParserHelper;
 
 })();

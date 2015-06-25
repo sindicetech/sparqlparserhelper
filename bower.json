@@ -1,6 +1,6 @@
 {
   "name": "sparqlparserhelper",
-  "main": "sparqlparserhelper.js",
+  "main": "dist/sparqlparserhelper.min.js",
   "version": "1.0.1",
   "homepage": "https://github.com/sindicetech/sparqlparserhelper",
   "authors": [
